@@ -1,5 +1,6 @@
 package org.sopt.sample.presentation.livedata
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.viewModels
@@ -7,6 +8,7 @@ import androidx.lifecycle.Observer
 import org.sopt.sample.R
 import org.sopt.sample.base.BindingActivity
 import org.sopt.sample.databinding.ActivityLivedataBinding
+import org.sopt.sample.presentation.twowaylivedata.TwoWayLiveDataActivity
 
 class LiveDataActivity : BindingActivity<ActivityLivedataBinding>(R.layout.activity_livedata) {
     private val viewModel: LiveDataViewModel by viewModels()
@@ -20,6 +22,13 @@ class LiveDataActivity : BindingActivity<ActivityLivedataBinding>(R.layout.activ
         }
         binding.btnPlus.setOnClickListener {
             viewModel.addValue()
+        }
+        binding.btnMinus.setOnClickListener {
+            viewModel.subValue()
+        }
+        binding.btnToway.setOnClickListener {
+            startActivity(Intent(this,TwoWayLiveDataActivity::class.java))
+            finish()
         }
 
 
@@ -36,10 +45,5 @@ class LiveDataActivity : BindingActivity<ActivityLivedataBinding>(R.layout.activ
 //      3. xml에 viewModel의 변수를 지정해서 DataBinding과 함께 사용하는 방식
 //        xml의 카운트에 해당하는 부분에 @{vm.setNumberAdd()}를 적어놓고,
 //        viewModel의 setNumberAdd()에서는 number에 1을 더한 값을 return하도록 만들면 된다.
-
-//      4. 양방향 binding
-//        viewModel.inputText.observe(this) {
-//            Log.d("값 변화", it)
-//        }
     }
 }
