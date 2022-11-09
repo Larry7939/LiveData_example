@@ -10,16 +10,63 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/twoway_inputText_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="입력값: "
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginEnd="80dp">
+        </TextView>
         <EditText
-            android:id="@+id/inputNumber"
+            android:id="@+id/inputText_et"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@={vm.inputText}"
+            app:layout_constraintStart_toEndOf="@id/twoway_inputText_tv"
+            app:layout_constraintTop_toTopOf="@id/twoway_inputText_tv"
+            app:layout_constraintBottom_toBottomOf="@id/twoway_inputText_tv"/>
+
+
+        <TextView
+            android:id="@+id/twoway_outputText_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/twoway_inputText_tv"
+            app:layout_constraintEnd_toEndOf="@id/twoway_inputText_tv"
+            app:layout_constraintTop_toBottomOf="@id/twoway_inputText_tv"
+            android:text="출력값: "
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"/>
+        <TextView
+            android:id="@+id/outputText_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{vm.inputText}"
+            app:layout_constraintStart_toEndOf="@id/twoway_outputText_tv"
+            app:layout_constraintTop_toTopOf="@id/twoway_outputText_tv"
+            app:layout_constraintBottom_toBottomOf="@id/twoway_outputText_tv"/>
+
+        <Button
+            android:id="@+id/btn_toway"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_chainStyle="packed" />
-
+            app:layout_constraintTop_toBottomOf="@+id/inputText_et"
+            android:backgroundTint="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:text="Mediator LiveData">
+        </Button>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
