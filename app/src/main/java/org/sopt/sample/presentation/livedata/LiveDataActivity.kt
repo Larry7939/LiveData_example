@@ -18,7 +18,7 @@ class LiveDataActivity : BindingActivity<ActivityLivedataBinding>(R.layout.activ
         binding.lifecycleOwner = this
 
         viewModel.number.observe(this){
-            binding.inputNumber.text = it.toString()
+            binding.inputTextEt.text = it.toString()
         }
         binding.btnPlus.setOnClickListener {
             viewModel.addValue()
