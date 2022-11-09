@@ -14,12 +14,20 @@
         android:theme="@style/Theme.INSOPTAndroidPractice"
         tools:targetApi="31">
         <activity
-            android:name=".MediatorActivity"
+            android:name=".presentation.twowaylivedata.TwoWayLiveDataActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity
+            android:name=".presentation.mediator.MediatorActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
         <activity
             android:name=".presentation.livedata.LiveDataActivity"
             android:exported="true">
