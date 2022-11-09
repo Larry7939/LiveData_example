@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="vm"
             type="org.sopt.sample.presentation.mediator.MediatorViewModel" />
@@ -14,63 +15,70 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".presentation.mediator.MediatorActivity">
+
         <TextView
             android:id="@+id/mediator_id_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
             android:text="ID"
+            android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold"
-            android:textColor="@color/black"
-            android:layout_marginEnd="10dp"
-            app:layout_constraintTop_toTopOf="@id/mediator_id_et"
             app:layout_constraintBottom_toBottomOf="@id/mediator_id_et"
-            app:layout_constraintEnd_toStartOf="@id/mediator_id_et"/>
+            app:layout_constraintEnd_toStartOf="@id/mediator_id_et"
+            app:layout_constraintTop_toTopOf="@id/mediator_id_et" />
+
         <TextView
             android:id="@+id/mediator_pw_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
             android:text="PW"
+            android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold"
-            android:textColor="@color/black"
-            android:layout_marginEnd="10dp"
-            app:layout_constraintTop_toTopOf="@id/mediator_pw_et"
             app:layout_constraintBottom_toBottomOf="@id/mediator_pw_et"
-            app:layout_constraintEnd_toStartOf="@id/mediator_pw_et"/>
+            app:layout_constraintEnd_toStartOf="@id/mediator_pw_et"
+            app:layout_constraintTop_toTopOf="@id/mediator_pw_et" />
+
         <EditText
             android:id="@+id/mediator_id_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="60dp"
-            android:layout_marginEnd="60dp"/>
+            android:text="@={vm.id}"/>
 
         <EditText
             android:id="@+id/mediator_pw_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="60dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/mediator_id_et"
-            android:layout_marginStart="60dp"
-            android:layout_marginEnd="60dp"
-            android:layout_marginTop="30dp"/>
+            android:text="@={vm.pw}"/>
 
         <Button
-            android:layout_width="wrap_content"
+            android:id="@+id/mediator_login_btn"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/mediator_pw_et"
-            android:text="로그인"
-            android:textStyle="bold"
-            android:textSize="15sp"
+            android:layout_marginTop="30dp"
             android:backgroundTint="@color/black"
-            android:layout_marginTop="30dp"/>
+            android:text="로그인"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:onClick="@{()->vm.isEnabledLoginButton()}"
+            app:layout_constraintEnd_toEndOf="@id/mediator_pw_et"
+            app:layout_constraintStart_toStartOf="@id/mediator_pw_tv"
+            app:layout_constraintTop_toBottomOf="@+id/mediator_pw_et" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
