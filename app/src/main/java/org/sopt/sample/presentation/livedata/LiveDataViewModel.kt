@@ -1,10 +1,6 @@
 package org.sopt.sample.presentation.livedata
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MediatorLiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.*
 
 class LiveDataViewModel:ViewModel() {
     //ViewModel의 LiveData 인스턴스 생성
@@ -20,6 +16,4 @@ class LiveDataViewModel:ViewModel() {
         _number.value = _number.value?.minus(1)
         return number.value
     }
-
-
 }

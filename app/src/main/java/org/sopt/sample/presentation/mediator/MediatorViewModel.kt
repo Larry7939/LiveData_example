@@ -10,7 +10,10 @@ class MediatorViewModel:ViewModel() {
     val pw:MutableLiveData<String> = MutableLiveData<String>()
 
     val isInputValid:MediatorLiveData<Boolean> = MediatorLiveData<Boolean>()
-    fun isEnabledLoginButton(){
+    init {
+        isEnabledLoginButton()
+    }
+    private fun isEnabledLoginButton(){
         isInputValid.apply {
             addSource(id){value = isValidSignInfo()}
             addSource(pw){value = isValidSignInfo()}
@@ -18,7 +21,7 @@ class MediatorViewModel:ViewModel() {
         //MediatorLiveDataExt에서 정의한 확장함수로 여러 개의 LiveData 인자를 받을 수 있다.
         //isInputValid.addSourceList(id,pw){isValidSignInfo()}
     }
-    fun isValidSignInfo() = !id.value.isNullOrBlank() && !pw.value.isNullOrBlank()
+    private fun isValidSignInfo() = !id.value.isNullOrBlank() && !pw.value.isNullOrBlank()
 
 
 }

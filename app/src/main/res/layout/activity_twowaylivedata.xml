@@ -17,12 +17,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="200dp"
             android:text="입력값: "
             android:textSize="15sp"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:layout_marginEnd="80dp">
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="180dp">
         </TextView>
         <EditText
             android:id="@+id/inputText_et"
@@ -62,11 +63,11 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/inputText_et"
             android:backgroundTint="@color/black"
             android:textSize="15sp"
             android:textStyle="bold"
-            android:text="Mediator LiveData">
+            android:text="Mediator LiveData"
+            android:layout_marginBottom="350dp">
         </Button>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

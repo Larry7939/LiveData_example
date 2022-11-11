@@ -48,10 +48,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
             android:layout_marginEnd="60dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="200dp"
             android:text="@={vm.id}"/>
 
         <EditText
@@ -71,14 +71,15 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:backgroundTint="@color/black"
+            android:backgroundTint="@color/grey"
+            android:clickable="false"
             android:text="로그인"
             android:textSize="15sp"
             android:textStyle="bold"
-            android:onClick="@{()->vm.isEnabledLoginButton()}"
             app:layout_constraintEnd_toEndOf="@id/mediator_pw_et"
             app:layout_constraintStart_toStartOf="@id/mediator_pw_tv"
-            app:layout_constraintTop_toBottomOf="@+id/mediator_pw_et" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="350dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

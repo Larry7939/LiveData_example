@@ -37,7 +37,7 @@ class LiveDataActivity : BindingActivity<ActivityLivedataBinding>(R.layout.activ
 //      val myObserver = Observer<Int> { binding.textTest.text = it.toString() }
 //      viewModel.number.observe(this,myObserver)
 //
-////      2. 곧바로 어떤 동작을 할 지 만드는 방식
+////      2. 람다함수를 활용하는 방식
 //        viewModel.number.observe(this) {
 //            binding.textTest.text = it.toString()
 //        }

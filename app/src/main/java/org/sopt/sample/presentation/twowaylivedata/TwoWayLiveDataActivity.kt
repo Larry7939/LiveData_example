@@ -17,11 +17,6 @@ class TwoWayLiveDataActivity :
         binding.vm = viewModel
         binding.lifecycleOwner = this
 
-
-//      양방향 binding
-//        viewModel.inputText.observe(this) {
-//            Log.d("값 변화", it)
-//        }
         binding.btnToway.setOnClickListener {
             startActivity(Intent(this, MediatorActivity::class.java))
             finish()
