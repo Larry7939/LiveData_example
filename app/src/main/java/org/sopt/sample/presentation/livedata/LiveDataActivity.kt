@@ -16,22 +16,10 @@ class LiveDataActivity : BindingActivity<ActivityLivedataBinding>(R.layout.activ
         super.onCreate(savedInstanceState)
         binding.vm = viewModel
         binding.lifecycleOwner = this
-
         viewModel.number.observe(this){
             binding.inputTextEt.text = it.toString()
         }
-
-        binding.btnPlus.setOnClickListener {
-            viewModel.addValue()
-        }
-        binding.btnMinus.setOnClickListener {
-            viewModel.subValue()
-        }
-        binding.btnToway.setOnClickListener {
-            startActivity(Intent(this,TwoWayLiveDataActivity::class.java))
-            finish()
-        }
-
+        setListeners()
 //        1. 특정 동작을 하는 Observer를 미리 만들어 놓고 observe함수에 전달하는 방식
 //      val myObserver = Observer<Int> { binding.textTest.text = it.toString() }
 //      viewModel.number.observe(this,myObserver)
@@ -44,5 +32,17 @@ class LiveDataActivity : BindingActivity<ActivityLivedataBinding>(R.layout.activ
 //      3. xml에 viewModel의 변수를 지정해서 DataBinding과 함께 사용하는 방식
 //        xml의 카운트에 해당하는 부분에 @{vm.setNumberAdd()}를 적어놓고,
 //        viewModel의 setNumberAdd()에서는 number에 1을 더한 값을 return하도록 만들면 된다.
+    }
+    private fun setListeners(){
+        binding.btnPlus.setOnClickListener {
+            viewModel.addValue()
+        }
+        binding.btnMinus.setOnClickListener {
+            viewModel.subValue()
+        }
+        binding.btnToway.setOnClickListener {
+            startActivity(Intent(this,TwoWayLiveDataActivity::class.java))
+            finish()
+        }
     }
 }
