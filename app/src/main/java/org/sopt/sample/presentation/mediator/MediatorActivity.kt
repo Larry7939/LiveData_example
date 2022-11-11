@@ -1,11 +1,13 @@
 package org.sopt.sample.presentation.mediator
 
+import android.content.Intent
 import android.content.res.Resources
 import android.os.Bundle
 import androidx.activity.viewModels
 import org.sopt.sample.R
 import org.sopt.sample.base.BindingActivity
 import org.sopt.sample.databinding.ActivityMediatorBinding
+import org.sopt.sample.presentation.flow.FlowActivity
 import org.sopt.sample.util.showToast
 
 class MediatorActivity : BindingActivity<ActivityMediatorBinding>(R.layout.activity_mediator) {
@@ -29,6 +31,12 @@ class MediatorActivity : BindingActivity<ActivityMediatorBinding>(R.layout.activ
                     isClickable = false
                     setBackgroundColor(getColor(R.color.grey))
                 }
+            }
+        }
+        binding.mediatorLoginBtn.setOnClickListener {
+            if(viewModel.isInputValid.value == true){
+                startActivity(Intent(this,FlowActivity::class.java))
+                finish()
             }
         }
     }

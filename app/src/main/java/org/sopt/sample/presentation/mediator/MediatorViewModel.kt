@@ -11,6 +11,7 @@ class MediatorViewModel:ViewModel() {
 
     val isInputValid:MediatorLiveData<Boolean> = MediatorLiveData<Boolean>()
     init {
+        isInputValid.value = false
         isEnabledLoginButton()
     }
     private fun isEnabledLoginButton(){
