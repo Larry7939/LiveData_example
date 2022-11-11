@@ -20,6 +20,7 @@ class LiveDataActivity : BindingActivity<ActivityLivedataBinding>(R.layout.activ
         viewModel.number.observe(this){
             binding.inputTextEt.text = it.toString()
         }
+
         binding.btnPlus.setOnClickListener {
             viewModel.addValue()
         }
@@ -31,9 +32,7 @@ class LiveDataActivity : BindingActivity<ActivityLivedataBinding>(R.layout.activ
             finish()
         }
 
-
-//
-////      1. 특정 동작을 하는 Observer를 미리 만들어 놓고 observe함수에 전달하는 방식
+//        1. 특정 동작을 하는 Observer를 미리 만들어 놓고 observe함수에 전달하는 방식
 //      val myObserver = Observer<Int> { binding.textTest.text = it.toString() }
 //      viewModel.number.observe(this,myObserver)
 //
