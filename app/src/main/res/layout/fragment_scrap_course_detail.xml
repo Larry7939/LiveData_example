@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_scrap_course_detail_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/scrap_course_detail_map"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_scrap_course_detail_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="33dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/connecting_recommend_favorite_selector" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_scrap_course_detail_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_scrap_course_detail_map"
+        app:srcCompat="@drawable/scrap_course_detail_profile_img" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_scrap_course_detail_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_scrap_course_detail_profile"
+        app:layout_constraintStart_toEndOf="@id/iv_scrap_course_detail_profile"
+        app:layout_constraintTop_toTopOf="@id/iv_scrap_course_detail_profile"
+        tools:text="RUNTOGETHER" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_scrap_course_detail_lv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_scrap_course_detail_nickname"
+        app:layout_constraintStart_toEndOf="@id/tv_scrap_course_detail_nickname"
+        app:layout_constraintTop_toTopOf="@id/tv_scrap_course_detail_nickname"
+        app:srcCompat="@drawable/scrap_cource_detail_lv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_scrap_course_detail_lv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="4dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_scrap_course_detail_lv"
+        app:layout_constraintEnd_toEndOf="@+id/iv_scrap_course_detail_lv"
+        app:layout_constraintStart_toStartOf="@+id/iv_scrap_course_detail_lv"
+        app:layout_constraintTop_toTopOf="@id/iv_scrap_course_detail_lv"
+        tools:text="Lv" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_scrap_course_detail_line1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="74dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_scrap_course_detail_map"
+        app:srcCompat="@drawable/scrap_course_detail_line1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_scrap_course_detail_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="13dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_scrap_course_detail_line1"
+        tools:text="마포구 어쩌구 설명글" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_scrap_course_detail_length"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="53dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_scrap_course_detail_line1"
+        app:srcCompat="@drawable/scrap_course_detail_circle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv1_scrap_course_detail_length"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_scrap_course_detail_length"
+        app:layout_constraintStart_toEndOf="@id/iv_scrap_course_detail_length"
+        app:layout_constraintTop_toTopOf="@id/iv_scrap_course_detail_length"
+        tools:text="길이" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv2_scrap_course_detail_length"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv1_scrap_course_detail_length"
+        app:layout_constraintStart_toEndOf="@id/tv1_scrap_course_detail_length"
+        app:layout_constraintTop_toTopOf="@id/tv1_scrap_course_detail_length"
+        tools:text="2.3km" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_scrap_course_detail_starting_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        app:layout_constraintStart_toStartOf="@id/iv_scrap_course_detail_length"
+        app:layout_constraintTop_toBottomOf="@id/iv_scrap_course_detail_length"
+        app:srcCompat="@drawable/scrap_course_detail_circle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv1_scrap_course_detail_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_scrap_course_detail_starting_point"
+        app:layout_constraintStart_toEndOf="@id/iv_scrap_course_detail_starting_point"
+        app:layout_constraintTop_toTopOf="@id/iv_scrap_course_detail_starting_point"
+        tools:text="출발지" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv2_scrap_course_detail_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv1_scrap_course_detail_start"
+        app:layout_constraintStart_toStartOf="@id/tv2_scrap_course_detail_length"
+        app:layout_constraintTop_toTopOf="@id/tv1_scrap_course_detail_start"
+        tools:text="잠실역 4번 출구" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_scrap_course_detail_line2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="195dp"
+        app:layout_constraintTop_toBottomOf="@id/iv_scrap_course_detail_map"
+        app:srcCompat="@drawable/scrap_course_detail_line2" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_scrap_course_detail_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_scrap_course_detail_line2"
+        tools:text="코스 설명에 관한 글  코스 설명에 관한 글 코스 설명에 관한 글  코스 설명에 관한 글 코스 설명에 관한 글  코스 설명에 관한 글 코스 설명에 관한 글  코스 설명에 관한 글
+" />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_scrap_course_detail_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="53dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginStart="35dp"
+        app:srcCompat="@drawable/scrap_course_detail_start"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_scrap_course_detail_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_scrap_course_detail_start"
+        app:layout_constraintEnd_toEndOf="@id/iv_scrap_course_detail_start"
+        app:layout_constraintStart_toStartOf="@id/iv_scrap_course_detail_start"
+        app:layout_constraintTop_toTopOf="@+id/iv_scrap_course_detail_start"
+        android:text="시작하기"
+        android:textColor="@color/white"
+        android:textSize="16sp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
