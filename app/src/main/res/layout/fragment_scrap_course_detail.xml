@@ -110,7 +110,7 @@
         app:layout_constraintBottom_toBottomOf="@id/iv_scrap_course_detail_length"
         app:layout_constraintStart_toEndOf="@id/iv_scrap_course_detail_length"
         app:layout_constraintTop_toTopOf="@id/iv_scrap_course_detail_length"
-        tools:text="길이" />
+        tools:text="거리" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv2_scrap_course_detail_length"
