@@ -59,4 +59,6 @@ dependencies {
 
     //DataStore
     implementation("androidx.datastore:datastore-preferences:1.0.0")
+    //Timber
+    implementation 'com.jakewharton.timber:timber:5.0.1'
 }

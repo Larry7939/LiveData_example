@@ -11,6 +11,78 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".presentation.flow.FlowActivity">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_flow_repeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="repeatOnLifecycle"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_flow_repeat_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_flow_repeat"
+            app:layout_constraintStart_toStartOf="@+id/tv_flow_repeat"
+            app:layout_constraintTop_toBottomOf="@+id/tv_flow_repeat" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_flow_launch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="launch"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_flow_launch_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_flow_launch"
+            app:layout_constraintStart_toStartOf="@+id/tv_flow_launch"
+            app:layout_constraintTop_toBottomOf="@+id/tv_flow_launch" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_flow_launch_when_started"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="launchWhenStarted"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_flow_launch_when_started_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_flow_launch_when_started"
+            app:layout_constraintStart_toStartOf="@+id/tv_flow_launch_when_started"
+            app:layout_constraintTop_toBottomOf="@+id/tv_flow_launch_when_started" />
+        <androidx.constraintlayout.helper.widget.Flow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="horizontal"
+            app:constraint_referenced_ids="tv_flow_repeat,tv_flow_launch,tv_flow_launch_when_started"
+            >
+        </androidx.constraintlayout.helper.widget.Flow>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
